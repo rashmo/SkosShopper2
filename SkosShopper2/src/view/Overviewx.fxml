@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="486.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OverviewController">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="73.0" prefWidth="787.0" style="-fx-border-width: 1px; -fx-border-color: black;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <Label fx:id="labelFusekiServer" layoutX="10.0" layoutY="5.0" text="Fuseki Server">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelStatusFuseki" layoutX="117.0" layoutY="42.0" text="Status:" />
+            <Button fx:id="startStopFuseki" layoutX="39.0" layoutY="37.0" mnemonicParsing="false" onAction="#startStopFuseki" text="Stop" />
+            <Label fx:id="labelVersion" layoutX="301.0" layoutY="18.0" text="Version:" />
+            <Label layoutX="373.0" layoutY="18.0" prefHeight="17.0" prefWidth="389.0" text="Jetty 7.2.1.v20101111" />
+            <Label fx:id="labelStartedFuseki" layoutX="301.0" layoutY="42.0" text="Started:" />
+            <Label fx:id="fusekiStatus" layoutX="168.0" layoutY="42.0" mnemonicParsing="false" text="running" textFill="#32c832" />
+            <Button fx:id="checkServer" alignment="CENTER_RIGHT" layoutX="693.0" layoutY="37.0" mnemonicParsing="false" onAction="#checkServer" text="checkServer" />
+            
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="87.0" prefHeight="95.0" prefWidth="787.0" style="-fx-border-color: black;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Label fx:id="labelOverviewServerDataInfo" layoutX="14.0" layoutY="14.0" text="Dataset Information">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelOverviewAmountIndividuals" alignment="TOP_RIGHT" layoutX="14.0" layoutY="67.0" text="Amount Individuals:" />
+            <Label layoutX="14.0" layoutY="76.0" text="Amount ObjektProperties" visible="false" />
+            <Label layoutX="14.0" layoutY="96.0" text="Amount DataProperties:" visible="false" />
+            <Label fx:id="lblIndividuals" layoutX="192.0" layoutY="67.0" text="Label" />
+            <Label fx:id="lblObjektProperties" layoutX="192.0" layoutY="76.0" text="Label" visible="false" />
+            <Label fx:id="lblDataProperties" layoutX="192.0" layoutY="96.0" text="Label" visible="false" />
+            <Label fx:id="labelOverviewAmountCustomClasses" layoutX="14.0" layoutY="50.0" text="Amount costum Classes" />
+            <Label fx:id="lblClasses" layoutX="192.0" layoutY="50.0" text="Label" />
+            <Label layoutX="14.0" layoutY="32.0" text="Data is currently load from " />
+            <Label layoutX="265.0" layoutY="32.0" text="Change to:" />
+            <ChoiceBox fx:id="OverviewChoiceBoxSource" layoutX="330.0" layoutY="28.0" prefWidth="150.0" />
+            <Button fx:id="OverviewBtnReload" layoutX="330.0" layoutY="55.0" mnemonicParsing="false" onAction="#OverviewbtnReloadDatasetOnAction" text="Reload" />
+            <TextField fx:id="OverviewtxtField" layoutX="487.0" layoutY="28.0" promptText="http://www.w3.org/2004/02/skos/core#" visible="false" />
+            <Button fx:id="OverviewbtnLoadFromStorage" layoutX="487.0" layoutY="28.0" mnemonicParsing="false" onAction="#OverviewBtnLoadDataFromStorageOnAction" text="load from local Storage" visible="false" />
+            <Button layoutX="383.0" layoutY="55.0" mnemonicParsing="false" text="add Ontologie" />
+            <Label fx:id="OverviewlblState" layoutX="158.0" layoutY="32.0" text="Label" />
+         </children>
+      </Pane>
+      <WebView fx:id="webView" layoutX="14.0" layoutY="229.0" prefHeight="247.0" prefWidth="270.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="535.0" AnchorPane.topAnchor="229.0" />
+      <Button layoutX="14.0" layoutY="200.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="&lt;" />
+      <TextField fx:id="txtFieldURL" layoutX="200.0" layoutY="200.0" prefHeight="25.0" prefWidth="491.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="200.0" />
+      <Button fx:id="btnHome" layoutX="65.0" layoutY="200.0" mnemonicParsing="false" onAction="#btnHomeOnAction" text="Fuseki Home" />
+      <ListView fx:id="OverviewListView" layoutX="210.0" layoutY="225.0" prefHeight="258.0" prefWidth="605.0" />
+   </children>
+</AnchorPane>

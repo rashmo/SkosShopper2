@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="490.0" prefWidth="613.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingsStartupController">
+   <children>
+      <CheckBox fx:id="loadFileOnStart" layoutX="20.0" layoutY="49.0" mnemonicParsing="false" selected="true" text="Load file at program start" />
+      <Label layoutX="210.0" layoutY="49.0" text="(requires &quot;Start Fuseki at program start&quot;)">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="startFusekiOnStart" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" selected="true" text="Start Fuseki at program start" />
+      <Button layoutX="20.0" layoutY="76.0" mnemonicParsing="false" text="Select File" />
+      <Label fx:id="startfilePath" layoutX="113.0" layoutY="80.0" text="../../fuseki/Data/books.ttl" />
+      <Button layoutX="14.0" layoutY="451.0" mnemonicParsing="false" text="Save Changes" />
+      <Button layoutX="112.0" layoutY="451.0" mnemonicParsing="false" text="Cancel" />
+   </children>
+</AnchorPane>

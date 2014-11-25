@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SkosEditorController">
+   <children>
+      <Label layoutX="231.0" layoutY="14.0" text="ClassURI:" />
+      <Label fx:id="label_uri" layoutX="313.0" layoutY="14.0" prefHeight="17.0" prefWidth="358.0" text="adress" AnchorPane.leftAnchor="313.0" />
+      <ListView fx:id="listview_indi" layoutY="281.0" onMouseClicked="#selectIndividualOfOntClass" prefHeight="226.0" prefWidth="231.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="281.0" />
+      <Label fx:id="label_uri2" layoutX="313.0" layoutY="31.0" prefHeight="17.0" prefWidth="358.0" text="Individuals" />
+      <Label layoutX="231.0" layoutY="31.0" text="IndividualURI:" />
+      <Label layoutX="14.0" layoutY="259.0" text="%IndiOfClass" />
+      <ListView fx:id="listview_objprop" layoutX="712.0" layoutY="56.0" prefHeight="193.0" prefWidth="288.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <ListView fx:id="listview_dataprop" layoutX="712.0" layoutY="59.0" prefHeight="200.0" prefWidth="288.0" AnchorPane.bottomAnchor="248.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="59.0" />
+      <Label layoutX="722.0" layoutY="40.0" prefHeight="17.0" prefWidth="278.0" text="%Objectproperties" AnchorPane.rightAnchor="0.0" />
+      <Label layoutX="722.0" layoutY="291.0" prefHeight="17.0" prefWidth="278.0" text="%Dataproperties" AnchorPane.bottomAnchor="199.0" AnchorPane.rightAnchor="0.0" />
+      <ListView fx:id="listview_classes" layoutY="59.0" onMouseClicked="#selectOntClass" prefHeight="171.0" prefWidth="231.0" />
+      <Label layoutX="14.0" layoutY="40.0" text="%SkosTreeView" />
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="230.0" layoutY="59.0" prefHeight="446.0" prefViewportHeight="446.0" prefViewportWidth="457.0" prefWidth="483.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="287.0" AnchorPane.topAnchor="59.0">
+         <content>
+            <Accordion fx:id="accordionpane" layoutX="168.0" layoutY="59.0" prefHeight="446.0" prefWidth="407.0">
+              <panes>
+                <TitledPane fx:id="acc_addIndi" animated="false" prefHeight="318.0" prefWidth="481.0" text="%accordion_addIndi">
+                     <content>
+                        <AnchorPane prefHeight="211.0" prefWidth="479.0">
+                           <children>
+                              <Label layoutX="30.0" layoutY="198.0" text="%name" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="198.0" />
+                              <TextField fx:id="txtfield_individiaulname" layoutX="28.0" layoutY="215.0" prefHeight="25.0" prefWidth="231.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="210.0" AnchorPane.topAnchor="215.0" />
+                              <TextField fx:id="txtfield_IndiLabel" layoutX="30.0" layoutY="291.0" prefHeight="25.0" prefWidth="423.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="280.0" />
+                              <Label layoutX="31.0" layoutY="264.0" text="%Label" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="264.0" />
+                              <Button fx:id="btn_addIndividual" layoutX="279.0" layoutY="215.0" mnemonicParsing="false" onAction="#addIndi" prefHeight="25.0" prefWidth="174.0" text="%btnAddIndividual" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="215.0" />
+                              <TextArea editable="false" layoutX="31.6" layoutY="20.0" prefHeight="168.0" prefWidth="427.0" text="%Individualexample" wrapText="true" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="22.0" />
+                           </children>
+                        </AnchorPane>
+                     </content></TitledPane>
+                <TitledPane fx:id="acc_editLabel" animated="false" prefHeight="239.0" prefWidth="375.0" text="%accordion_editLabel">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="39.0" layoutY="182.0" text="%selectedindividual" AnchorPane.leftAnchor="20.0" />
+                              <Label fx:id="selectedIndiLocalname" layoutX="168.6" layoutY="182.0" prefHeight="17.0" prefWidth="248.0" text="name of inidivudal" AnchorPane.leftAnchor="159.0" AnchorPane.rightAnchor="20.0" />
+                              <TextField fx:id="txtfield_editLabel" layoutX="40.0" layoutY="248.0" prefHeight="25.0" prefWidth="278.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="179.80000000000007" AnchorPane.topAnchor="248.0" />
+                              <Label layoutX="40.0" layoutY="219.0" text="%Label" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="219.0" />
+                              <Button fx:id="btn_editLabel" layoutX="302.0" layoutY="258.0" mnemonicParsing="false" onAction="#editLabel" prefHeight="25.0" prefWidth="127.0" text="%btnAddLabel" AnchorPane.rightAnchor="20.0" />
+                              <TextArea editable="false" layoutX="40.0" layoutY="30.0" prefHeight="108.0" prefWidth="411.0" text="%editLabelExample" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                           </children>
+                        </AnchorPane>
+                     </content></TitledPane>
+                  <TitledPane fx:id="acc_addCollection" animated="false" text="%accordion_addCollection">
+                     <content>
+                        <ScrollPane fitToWidth="true" pannable="true">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="624.0" prefWidth="479.0">
+                                 <children>
+                                    <TextArea layoutX="27.0" layoutY="14.0" prefHeight="168.0" prefWidth="434.0" text="%AddCollectionExample" wrapText="true" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="22.0" />
+                                    <Label layoutX="22.0" layoutY="230.0" text="%name" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="210.0" AnchorPane.topAnchor="198.0" />
+                                    <TextField fx:id="textfieldCollectionName" layoutX="22.0" layoutY="215.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="210.0" AnchorPane.topAnchor="215.0" />
+                                    <Button layoutX="224.0" layoutY="472.0" maxHeight="25.0" maxWidth="33.0" minHeight="25.0" minWidth="33.0" mnemonicParsing="false" onAction="#insertToCollection" prefHeight="25.0" prefWidth="33.0" text="&gt;" AnchorPane.leftAnchor="224.0" AnchorPane.topAnchor="350.0" />
+                                    <Button layoutX="269.0" layoutY="240.0" maxHeight="25.0" maxWidth="33.0" minHeight="25.0" minWidth="33.0" mnemonicParsing="false" onAction="#deleteFromCollection" prefHeight="25.0" prefWidth="33.0" text="X" AnchorPane.leftAnchor="224.0" AnchorPane.topAnchor="375.0" />
+                                    <Label layoutX="22.0" layoutY="260.0" text="%Label" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="264.0" />
+                                    <TextField fx:id="textfieldCollectionLabelName" layoutX="22.0" layoutY="290.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="280.0" />
+                                    <ListView fx:id="listviewCollectionChoise" layoutX="22.0" layoutY="325.0" minHeight="200.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="350.0" />
+                                    <ListView fx:id="listviewCollectionSelected" layoutX="222.0" layoutY="359.0" minHeight="200.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="259.0" AnchorPane.topAnchor="350.0" />
+                                    <ChoiceBox fx:id="choiseBoxCollectionFilter" layoutX="22.0" layoutY="377.0" onMouseClicked="#showSubIndividualinListView" prefHeight="30.0" prefWidth="200.0" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="320.0" />
+                                    <Label fx:id="labelCollectionFromText" layoutX="257.0" layoutY="381.0" prefWidth="200.0" text="Collection: BLANK" AnchorPane.leftAnchor="259.0" AnchorPane.topAnchor="335.0" />
+                                    <Button layoutX="278.0" layoutY="215.0" mnemonicParsing="false" onAction="#createCollection" prefHeight="25.0" prefWidth="174.0" text="%btnAddCollection" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="215.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane fx:id="acc_editCollection" animated="false" prefHeight="371.0" prefWidth="442.0" text="%accordion_editCollection" />
+              </panes>
+            </Accordion>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

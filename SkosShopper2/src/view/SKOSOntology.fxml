@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minWidth="870.0" prefHeight="554.0" prefWidth="1009.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SKOSOntologyController">
+   <children>
+      <BorderPane layoutX="221.0" layoutY="110.0" prefHeight="554.0" prefWidth="936.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <SplitPane dividerPositions="0.32341269841269843" prefHeight="521.0" prefWidth="1010.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="552.0" prefWidth="248.0">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="32.0" prefHeight="26.0" prefWidth="299.0" AnchorPane.bottomAnchor="526.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <MenuButton fx:id="load_btn" alignment="TOP_LEFT" layoutX="5.0" layoutY="7.0" mnemonicParsing="false" text="load SKOS">
+                                <items>
+                                  <MenuItem fx:id="create_skos" mnemonicParsing="false" onAction="#create_from_scratch" text="create from scratch" />
+                                  <MenuItem fx:id="load_skos_from_storage" mnemonicParsing="false" onAction="#load_from_storage" text="load from local storage system" />
+                                    <MenuItem fx:id="load_from_fuseki" mnemonicParsing="false" onAction="#load_fuseki" text="load from fuseki" />
+                                    <MenuItem fx:id="load_from_web" mnemonicParsing="false" onAction="#load_web" text="load from web" />
+                                </items>
+                              </MenuButton>
+                           </children>
+                        </AnchorPane>
+                        <Separator layoutX="6.0" layoutY="42.0" prefHeight="1.0" prefWidth="310.0" />
+                        <TextField fx:id="statement_box1" layoutX="5.0" layoutY="65.0" onDragDropped="#droppedOnBox1" onDragOver="#overBox1" prefHeight="25.0" prefWidth="145.0" />
+                        <TextField fx:id="statement_box2" layoutX="170.0" layoutY="65.0" onDragDropped="#droppedOnBox2" onDragOver="#overBox2" prefHeight="25.0" prefWidth="145.0" />
+                        <Label fx:id="label_box1" layoutX="5.0" layoutY="48.0" text="Subject" />
+                        <Label fx:id="label_box2" layoutX="170.0" layoutY="48.0" text="Object" />
+                        <Label layoutX="5.0" layoutY="103.0" text="Option" />
+                        <ComboBox fx:id="statement_box5" layoutX="170.0" layoutY="120.0" prefHeight="25.0" prefWidth="145.0" visible="false" />
+                        <Label fx:id="label_box5" layoutX="170.0" layoutY="103.0" text="Annotation-Form" visible="false" />
+                        <ComboBox fx:id="statement_box6" layoutX="170.0" layoutY="175.0" prefHeight="25.0" prefWidth="80.0" visible="false" />
+                        <Label fx:id="label_box6" layoutX="170.0" layoutY="158.0" text="Datatype" visible="false" />
+                        <TextField fx:id="language" layoutX="262.0" layoutY="175.0" prefWidth="50.0" visible="false" />
+                        <Label fx:id="label_lang" layoutX="262.0" layoutY="158.0" text="Language" visible="false" />
+                        <Button fx:id="add1" layoutX="5.0" layoutY="175.0" mnemonicParsing="false" onAction="#add_statement1" text="Add" />
+                        <Label layoutX="10.0" layoutY="282.0" text="Assertion" />
+                        <Separator layoutX="6.0" layoutY="276.0" prefWidth="310.0" />
+                        <ComboBox fx:id="option_box" layoutX="5.0" layoutY="120.0" onAction="#option_event" prefHeight="25.0" prefWidth="145.0" />
+                        <Button fx:id="print" layoutX="5.0" layoutY="220.0" mnemonicParsing="false" onAction="#printing" text="print" />
+                        <Button fx:id="add2" layoutX="5.0" layoutY="175.0" mnemonicParsing="false" onAction="#add_statement2" text="Add" visible="false" />
+                        <Button fx:id="add3" layoutX="5.0" layoutY="175.0" mnemonicParsing="false" onAction="#add_statement3" text="Add" visible="false" />
+                        <ComboBox fx:id="statement_box4" layoutX="170.0" layoutY="120.0" prefHeight="25.0" prefWidth="145.0" visible="false" />
+                        <ComboBox fx:id="statement_box3" layoutX="170.0" layoutY="120.0" prefHeight="25.0" prefWidth="145.0" visible="false" />
+                        <Label fx:id="label_box3" layoutX="170.0" layoutY="103.0" text="Object Property" visible="false" />
+                        <Label fx:id="label_box4" layoutX="170.0" layoutY="103.0" text="Datatype" visible="false" />
+                        <TextField fx:id="delete_box" layoutX="170.0" layoutY="245.0" onDragDropped="#droppedDelete" onDragOver="#overBoxDelete" prefHeight="25.0" prefWidth="145.0" />
+                        <Label layoutX="170.0" layoutY="228.0" text="Delete" />
+                        <TableView fx:id="sparql_field" layoutX="4.0" layoutY="299.0" prefHeight="249.0" prefWidth="314.0">
+                          <columns>
+                            <TableColumn fx:id="predicateCol" prefWidth="157.0" resizable="false" text="Predicate" />
+                            <TableColumn fx:id="objectCol" prefWidth="157.0" resizable="false" text="Object" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="552.0" prefWidth="734.0">
+                     <children>
+                        <AnchorPane layoutY="276.0" />
+                        <AnchorPane layoutY="-1.0" />
+                        <TableView fx:id="table_concepts" onDragDetected="#table_concept_drag" onDragDone="#table_concept_drag_done" onMouseClicked="#clicked_concept" prefHeight="276.0" prefWidth="227.0">
+                          <columns>
+                            <TableColumn fx:id="conceptListColumn" prefWidth="226.0" text="Concepts" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="table_labels" layoutX="227.0" onDragDetected="#table_label_drag" onDragDone="#table_label_drag_done" onMouseClicked="#clicked_label" prefHeight="276.0" prefWidth="226.0">
+                          <columns>
+                            <TableColumn fx:id="labelListColumn" prefWidth="226.0" text="Labels" />
+                          </columns>
+                        </TableView>
+                        <TreeView fx:id="collection_tree" layoutX="453.0" layoutY="-2.0" onMouseClicked="#clicked_collection" prefHeight="554.0" prefWidth="226.0" />
+                        <TreeView fx:id="conceptSchemes_tree" layoutY="275.0" prefHeight="276.0" prefWidth="227.0" />
+                        <TreeView fx:id="ordCollection_tree" layoutX="227.0" layoutY="275.0" onMouseClicked="#clicked_ordCollection" prefHeight="276.0" prefWidth="226.0" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <BorderPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+               
+               
+               
+                  <TabPane fx:id="mainTabPane" prefHeight="500.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab fx:id="tabOverview" text="Overview">
+                          <content>
+                              <fx:include source="Overview.fxml" />
+                           </content>
+                        </Tab>
+                        <!-- 
+                        <Tab fx:id="tabClassesShow" text="Show Classes">
+                           <content>
+                              <fx:include source="ClassesShow.fxml" />
+                           </content></Tab>
+                        <Tab fx:id="tabClassesCreate" text="Create Class">
+                           <content>
+                              <fx:include source="ClassesCreate.fxml" />
+                           </content></Tab>
+                        -->
+                        <Tab fx:id="tabTriplesShow" text="Triples">
+                           <content>
+                              <fx:include source="TriplesShow.fxml" />
+                           </content></Tab>
+                        <Tab fx:id="tabSPARQLQuery" text="SparQL Query">
+                          <content>
+                           <fx:include source="SparQl.fxml" />
+                          </content>
+                        </Tab>
+                        <!-- 
+                        <Tab fx:id="tabTriplesCreate" text="Create Triple">
+                           <content>
+                              <fx:include source="TriplesCreate.fxml" />
+                           </content></Tab>
+                        -->
+                        <Tab fx:id="tabProductCategoriesSettings" text="Product &amp; Category Settings">
+                           <content>
+                              <fx:include source="ProductCategoriesSettings.fxml" />
+                           </content></Tab>
+                        <Tab fx:id="tabProductsShow" text="Products">
+                           <content>
+                              <fx:include source="ProductsShow.fxml" />
+                           </content></Tab>
+                        <Tab fx:id="tabProductCreate" text="Create Product">
+                           <content>
+                              <fx:include source="ProductCreate.fxml" />
+                           </content></Tab>
+                        <Tab fx:id="tabSKOSEditorLite" text="SKOSEditor">
+                          <content>
+                            <fx:include fx:id="skoseditorlite" source="SkosEditor.fxml" />
+                          </content>
+                        </Tab>
+
+                                                <Tab fx:id="tabSKOSOntology" text="SKOS">
+                           <content>
+                              <fx:include source="SKOSOntology.fxml" />
+                           </content>
+                           </Tab>
+                     </tabs>
+                  </TabPane>
+                  
+                  
+                  
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+         	<fx:include source="Menu.fxml" />
+         <!-- 
+            <MenuBar BorderPane.alignment="CENTER">
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Edit">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+             -->
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

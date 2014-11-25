@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="25.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu fx:id="menuFile" mnemonicParsing="false" text="%file">
+            <items>
+                  <MenuItem fx:id="importOnthologyFileItem" mnemonicParsing="false" onAction="#importOnthologyFile" text="%importOnthologyFile" />
+              <MenuItem fx:id="menuItemClose" mnemonicParsing="false" text="%exit" />
+            </items>
+          </Menu>
+          <Menu fx:id="settingsItem" mnemonicParsing="false" text="%settings">
+            <items>
+              <MenuItem fx:id="menuItemDelete" mnemonicParsing="false" text="%delete" />
+                  <MenuItem fx:id="onStartItem" mnemonicParsing="false" onAction="#showSettingsOnStart" text="%startupSettings" />
+                  <Menu fx:id="menuLanguage" mnemonicParsing="false" text="%language">
+                    <items>
+                      <MenuItem fx:id="menuItemEN" mnemonicParsing="false" onAction="#setEnglish" text="%english" />
+                        <MenuItem fx:id="menuItemGER" mnemonicParsing="false" onAction="#setGerman" text="%german" />
+                    </items>
+                  </Menu>
+            </items>
+          </Menu>
+          <Menu fx:id="menuHelp" mnemonicParsing="false" text="%help">
+            <items>
+              <MenuItem fx:id="menuItemAbout" mnemonicParsing="false" text="%about" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

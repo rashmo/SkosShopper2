@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="tabProductCategoriesSettings" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductCategorySettingsController">
+   <children>
+      <ScrollPane fx:id="selectionPaneScrollPane" layoutX="5.0" layoutY="40.0" prefHeight="550.0" percentHeight="100%" percentWidth="20%" prefWidth="250.0">
+        <content>
+          <AnchorPane fx:id="selectionPaneAnchorPane" percentHeight="100%" percentWidth="100%" minHeight="555.0" minWidth="250.0">
+               <children>
+                  <Pane fx:id="productCategoriesPane" prefHeight="50.0" prefWidth="230.0">
+                     <children>
+                        <TreeView fx:id="productCategoriesTreeView" layoutY="47.0" prefHeight="266.0" prefWidth="233.0" visible="false" />
+                        <Pane fx:id="productCategoriesBtn" layoutX="6.0" layoutY="3.0" onMouseClicked="#openProductCategories" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: #CCEEFF; -fx-border-color: #333333;">
+                           <children>
+                              <Label fx:id="productCategoriesLabel" layoutX="9.0" layoutY="10.0" text="Produkt Kategorien">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="productPropertiesPane" layoutY="50.0" prefHeight="50.0" prefWidth="230.0">
+                     <children>
+                        <ListView fx:id="productPropertiesListView" layoutY="46.0" prefHeight="135.0" prefWidth="233.0" />
+                        <Pane fx:id="productPropertiesBtn" layoutX="6.0" layoutY="4.0" onMouseClicked="#openProductProperties" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: #EEFFCC; -fx-border-color: #333333;">
+                           <children>
+                              <Label fx:id="productPropertiesLabel" layoutX="10.0" layoutY="-3.0" prefHeight="45.0" prefWidth="181.0" text="Produkteigenschaften &amp; Werte" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="productRelationsPane" layoutY="102.0" prefHeight="50.0" prefWidth="230.0">
+                     <children>
+                        <ListView fx:id="productRelationsListView" layoutY="46.0" prefHeight="135.0" prefWidth="233.0" />
+                        <Pane fx:id="productRelationsBtn" layoutX="6.0" layoutY="3.0" onMouseClicked="#openProductRelations" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: #FFEECC; -fx-border-color: #333333;">
+                           <children>
+                              <Label fx:id="productRelationsLabel" layoutX="10.0" layoutY="-3.0" prefHeight="45.0" prefWidth="181.0" text="Beziehungen zwischen Produkten &amp; Kategorien" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
+      <Pane fx:id="searchPane" layoutX="8.0" layoutY="5.0" prefHeight="33.0" prefWidth="233.0">
+         <children>
+            <Label fx:id="searchLabel" layoutX="8.0" layoutY="8.0" text="Suchen:" />
+            <TextField fx:id="searchTextField" layoutX="57.0" layoutY="4.0" prefHeight="25.0" prefWidth="175.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

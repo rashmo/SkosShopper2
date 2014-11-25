@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="lab_list_server" prefHeight="545.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OverviewController">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="33.0" prefWidth="552.0" style="-fx-border-width: 1px; -fx-border-color: black;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="434.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <Label fx:id="labelFusekiServer" layoutX="10.0" layoutY="5.0" prefHeight="25.0" prefWidth="291.0" text="SPARQL 1.1 Server Connector">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelStatusFuseki" layoutX="274.0" layoutY="8.0" text="Status:" />
+            <Label fx:id="labelVersion" layoutX="379.0" layoutY="8.0" text="Version:" />
+            <Label layoutX="434.0" layoutY="8.0" prefHeight="17.0" prefWidth="120.0" text="Jetty 7.2.1.v20101111" />
+            <Label fx:id="fusekiStatus" layoutX="317.0" layoutY="8.0" mnemonicParsing="false" text="running" textFill="#32c832" />
+            
+         </children>
+      </Pane>
+      <Button layoutX="753.0" layoutY="200.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="&lt;" />
+      <Button fx:id="btnHome" layoutX="699.0" layoutY="139.0" mnemonicParsing="false" onAction="#btnHomeOnAction" text="Fuseki Home" />
+      <AnchorPane layoutY="233.0" prefHeight="247.0" prefWidth="815.0">
+         <children>
+            <SplitPane dividerPositions="0.0036900369003690036" layoutX="7.0" layoutY="-132.0" prefHeight="443.0" prefWidth="1000.0" AnchorPane.bottomAnchor="-64.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-185.0" AnchorPane.topAnchor="-132.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <WebView fx:id="webView" layoutX="45.0" layoutY="7.0" prefHeight="245.0" prefWidth="807.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="441.0" prefWidth="1042.0">
+                     <children>
+                        <AnchorPane layoutX="25.0" layoutY="7.0" prefHeight="200.0" prefWidth="575.0">
+                           <children>
+                              <TextArea fx:id="ta_log_field" layoutX="42.0" prefHeight="200.0" prefWidth="575.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children></AnchorPane>
+                        <BorderPane layoutX="25.0" layoutY="210.0" prefHeight="225.0" prefWidth="575.0">
+                           <top>
+                              <AnchorPane prefHeight="40.0" prefWidth="575.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <AnchorPane layoutX="3.0" layoutY="6.0" prefHeight="27.0" prefWidth="275.0">
+                                       <children>
+                                          <TextField fx:id="tf_dest_url" layoutY="3.0" prefHeight="27.0" prefWidth="275.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="293.0" layoutY="6.0" prefHeight="27.0" prefWidth="232.0">
+                                       <children>
+                                          <TextField fx:id="tf_alt_url" layoutX="4.0" prefHeight="27.0" prefWidth="232.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="525.0" layoutY="6.0" prefHeight="27.0" prefWidth="53.0">
+                                       <children>
+                                          <Button fx:id="btn_add_entry" layoutX="7.0" mnemonicParsing="false" onAction="#adding_entry" text="add" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </top>
+                           <center>
+                              <TableView fx:id="tv_alt_entries" prefHeight="168.0" prefWidth="575.0" BorderPane.alignment="CENTER">
+                                <columns>
+                                  <TableColumn fx:id="col_dest_url" prefWidth="285.0" text="Destination URL" />
+                                  <TableColumn fx:id="col_alt_url" prefWidth="292.0" text="Alternative URL" />
+                                </columns>
+                              </TableView>
+                           </center></BorderPane>
+                        <AnchorPane layoutX="650.0" layoutY="7.0" prefHeight="428.0" prefWidth="309.0">
+                           <children>
+                              <TableView fx:id="tv_graph_uri" layoutX="14.0" layoutY="14.0" prefHeight="428.0" prefWidth="193.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="col_graph_uri" prefWidth="308.0" text="List of Graph URI:" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <Separator layoutX="622.0" layoutY="7.0" orientation="VERTICAL" prefHeight="428.0" prefWidth="1.0" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+      <Button fx:id="OverviewBtnReload" layoutX="483.0" layoutY="57.0" mnemonicParsing="false" onAction="#OverviewbtnReloadDatasetOnAction" prefHeight="33.0" text="Load" />
+      <MenuButton fx:id="btn_source" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="14.0" layoutY="57.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="33.0" prefWidth="456.0" text="Source">
+         <graphic>
+            <TextField fx:id="txtFieldURL" prefHeight="25.0" prefWidth="382.0" />
+         </graphic>
+      </MenuButton>
+      <TextField fx:id="tf_curr_loaded_graph" layoutX="695.0" layoutY="61.0" prefHeight="25.0" prefWidth="291.0" />
+      <Label fx:id="lab_curr_loaded_graph" layoutX="555.0" layoutY="65.0" text="Currently loaded graph:" />
+      <Button fx:id="btn_save_graph" layoutX="953.0" layoutY="21.0" mnemonicParsing="false" onAction="#saving_graph" text="OK" />
+      <Label fx:id="lab_save_graph" layoutX="643.0" layoutY="25.0" text="Save Graph:" />
+      <ComboBox fx:id="cb_save_graph" layoutX="713.0" layoutY="21.0" prefHeight="25.0" prefWidth="230.0" />
+   </children>
+</AnchorPane>

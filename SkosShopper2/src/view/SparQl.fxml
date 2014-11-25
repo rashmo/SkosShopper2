@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SparQlController">
+   <children>
+      <Group layoutX="14.0" layoutY="196.0" />
+      <TextArea fx:id="txtAreaQuery" prefHeight="121.0" prefWidth="415.0" style="-fx-border-color: black;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <TextArea fx:id="txtAreaResult" editable="false" layoutX="13.0" layoutY="121.0" prefHeight="97.0" prefWidth="395.0" style="-fx-border-color: black;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="145.0" />
+      <Button fx:id="SparQlSend" layoutX="349.0" layoutY="256.0" mnemonicParsing="false" onMouseClicked="#buttonSendQuery" text="Send Query" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+   </children>
+</AnchorPane>
