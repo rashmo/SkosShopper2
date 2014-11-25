@@ -19,24 +19,25 @@ import com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP;
 public class ServerImporter{
 
 
-	private static Model model;
-	private static DatasetAccessor ds;
-	private static OntDocumentManager mgr;
-	private static OntModelSpec spec;
+	public static Model model;
+	public static DatasetAccessor ds;
+	public static OntDocumentManager mgr;
+	public static OntModelSpec spec;
 	public static  String serviceURI = "";
-	private static String graphURI;
 	public static Map<String, String> uriMap;
 	public static ArrayList<String> graphList;
+	public static String graphURI;
 	
 	public ServerImporter() {
 		model = ModelFactory.createDefaultModel();
 		mgr = new OntDocumentManager();
-		spec = new OntModelSpec( OntModelSpec.OWL_DL_MEM );
+		spec = new OntModelSpec( OntModelSpec.OWL_DL_MEM);
 		spec.setDocumentManager(mgr);
 	}
 	
 	public static boolean importNamedGraph(String grphURI) {
 		try {
+			graphURI = grphURI;
 			model = ds.getModel(grphURI);
 			uriMap = model.getNsPrefixMap();
 			return true;
@@ -46,7 +47,10 @@ public class ServerImporter{
 	}
 	
 	public void importDefaultGraph() {
-		model = ds.getModel();
+		try {
+			model = ds.getModel();
+		} catch(Exception e) {
+		}
 	}
 
 	public void setServiceURI(String uri) {
@@ -54,32 +58,27 @@ public class ServerImporter{
 		ds = DatasetAccessorFactory.createHTTP(serviceURI);
 	}
 	
-	public static void setGraphURI(String grphURI) {
-		graphURI = grphURI;
-	}
-	
-	public static OntModelSpec getOntModelSpec() {
-		return spec;
-	}
-	
-	public static OntDocumentManager getOntDocMgr() {
-		return mgr;
-	}
-	
-	public static Model getModel() {
-		return model;
-	}
-
 	// Use this method when you want to write back and update a model to server
-	public void updateModelOfServer() {
-		model = ModelFacadeTEST.ontModel;
-		ds.add(model);
+	public static boolean updateModelOfServer() {
+		try {
+			model = ModelFacadeTEST.ontModel.getBaseModel();
+			model.write(System.out);
+			ds.add(graphURI, model);
+			return true;
+		} catch(Exception e) {
+		}
+		return false;
 	}
 	
 	// Use this method when you want to write back and replace a model to server
-	public void replaceModelOfServer() {
-		model = ModelFacadeTEST.ontModel;
-		ds.putModel(model);
+	public static boolean replaceModelOfServer() {
+		try {
+			model = ModelFacadeTEST.ontModel.getBaseModel();
+			ds.putModel(model);
+			return true;
+		} catch(Exception e) {
+		}
+		return false;
 	}
 	
 	// Use this method to enter an alternative url location of a file
@@ -91,11 +90,14 @@ public class ServerImporter{
 		try {
 			// Tricky query because of different server
 			String servURI = serviceURI;
+			Query graphQuery = null;
 			graphList = new ArrayList<String>();
 			if(servURI.toLowerCase().contains("data")) {
 				servURI = servURI.replaceAll("data", "sparql");
+				graphQuery = QueryFactory.create("SELECT DISTINCT ?g WHERE { GRAPH ?g { } }");
+			} else {
+				graphQuery = QueryFactory.create("SELECT DISTINCT ?g WHERE { GRAPH ?g { ?x ?y ?z } }");
 			}
-			Query graphQuery = QueryFactory.create("SELECT DISTINCT ?g WHERE { GRAPH ?g { } }");
 			QueryEngineHTTP qeHttp = QueryExecutionFactory.createServiceRequest(servURI, graphQuery);
 			ResultSet results = qeHttp.execSelect();
 			

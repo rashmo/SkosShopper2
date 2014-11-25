@@ -113,7 +113,7 @@ public class OverviewController implements Initializable{
 		cb_save_graph.setItems(saveModelTo);
 		
 		// Helpful for copy pasterino url at beginning
-		ta_log_field.setText("For copy pasterino:\nhttp://localhost:3030/ds/data");
+		ta_log_field.setText("For copy pasterino:\nFuseki:\nhttp://localhost:3030/ds/data\nor sesame server:\nhttp://localhost:8080/openrdf-sesame/repositories/test");
 		
 		
 		setGraphTable();
@@ -174,12 +174,45 @@ public class OverviewController implements Initializable{
 	
 	@FXML public void saving_graph(ActionEvent event) {
 		if(modelLoaded) {
+			ta_log_field.clear();
 			// send model back to server (add/update)
 			if(cb_save_graph.getValue().equals(saveModelTo.get(0))) {
-				System.out.println("sending to server");
+				// check if server is reachable
+				if(checkServerConnection()) {
+					ta_log_field.appendText("1. Trying to reach \"" + txtFieldURL.getText() + "\"\t... OK\n");
+					// try to add/update model from server
+					if(ServerImporter.updateModelOfServer()) {
+						ta_log_field.appendText("2. Trying to add/update model: \"" + tf_curr_loaded_graph.getText() + "\"\t... OK\n");
+						ta_log_field.appendText("3. Transaction successful");
+						// add/update was ok
+						modelLoaded = false;
+					} else {
+					    JOptionPane.showMessageDialog(null, "Unable to add/update model of server\nYou should store your model locally or retry",
+					            null, JOptionPane.WARNING_MESSAGE);
+					}
+				} else {
+					ta_log_field.appendText("1. Trying to reach \"" + txtFieldURL.getText() + "\"\t... FAILED\n");
+				}
 			// send model back to server (replace)
 			} else if(cb_save_graph.getValue().equals(saveModelTo.get(1))) {
-				System.out.println("replacing server");
+				// check if server is reachable
+				if(checkServerConnection()) {
+				    JOptionPane.showMessageDialog(null, "This will replace the model which is stored in server\nCannot be undone!",
+				            null, JOptionPane.WARNING_MESSAGE);
+					ta_log_field.appendText("1. Trying to reach \"" + txtFieldURL.getText() + "\"\t... OK\n");
+					// try to add/update model from server
+					if(ServerImporter.replaceModelOfServer()) {
+						ta_log_field.appendText("2. Trying to replace model: \"" + tf_curr_loaded_graph.getText() + "\"\t... OK\n");
+						ta_log_field.appendText("3. Transaction successful");
+						// add/update was ok
+						modelLoaded = false;
+					} else {
+					    JOptionPane.showMessageDialog(null, "Unable to replace model of server\nYou should store your model locally or retry",
+					            null, JOptionPane.WARNING_MESSAGE);
+					}
+				} else {
+					ta_log_field.appendText("1. Trying to reach \"" + txtFieldURL.getText() + "\"\t... FAILED\n");
+				}
 			//save model to file
 			} else if(cb_save_graph.getValue().equals(saveModelTo.get(2))) {
 				System.out.println("saving to file");
@@ -189,7 +222,6 @@ public class OverviewController implements Initializable{
 			    int result = JOptionPane.showConfirmDialog(null, "Changes will be lost, cannot be undone!",
 			            "Warning: Discard Model", JOptionPane.OK_CANCEL_OPTION);
 			}
-			modelLoaded = false;
 		} else {
 			//Warn the user that there is no model
 		    JOptionPane.showMessageDialog(null, "No model available to save",
@@ -198,6 +230,7 @@ public class OverviewController implements Initializable{
 	}
 	
 	@FXML private void OverviewbtnReloadDatasetOnAction(ActionEvent event) throws Exception {
+		graphURIs.clear();
 		if(!modelLoaded) {
 			ta_log_field.clear();
 			if(btn_server_import.isSelected()) {
@@ -242,6 +275,9 @@ public class OverviewController implements Initializable{
 			if(btn_web_import.isSelected()) {
 				
 			}
+		} else {
+		    JOptionPane.showMessageDialog(null, "There is already a model in process!",
+		            null, JOptionPane.WARNING_MESSAGE);
 		}
 	}
 	

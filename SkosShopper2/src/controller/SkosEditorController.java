@@ -129,9 +129,7 @@ public class SkosEditorController implements Initializable {
 	private ObservableList<Individual> indis = FXCollections.observableArrayList();
 	
 	//In this class used Ontology Model
-	private OntModel model = ModelFactory
-
-			.createOntologyModel( OntModelSpec.OWL_MEM_TRANS_INF);
+	private static OntModel model;
 	
 	//Selected OntClass and Individual
 	private OntClass selectedOntClass;
@@ -225,7 +223,7 @@ public class SkosEditorController implements Initializable {
 				//
 				// model.read(input.toUri().toString(), "RDF/XML");
 //				model = ModelFacadeTEST.getOntModel();
-				model.read("./fuseki/Data/test1.rdf");
+				//model.read("file:///C:/Users/rd/git/SkosShopper2/ServerConnector/fuseki/Data/test.rdf");
 //				 model = TripleModel.getAllTriples();
 //				 Model m = FusekiModel.getDatasetAccessor().getModel();
 //				 model.add(ModelFacadeTEST.getOntModel());
@@ -747,5 +745,13 @@ public class SkosEditorController implements Initializable {
 			}
 		}
 		return null;
+	}
+
+	public static void startSKOSController(OntModel ontModel) {
+		model = ontModel;
+	}
+
+	public static OntModel endSKOSController() {
+		return model;
 	}
 }

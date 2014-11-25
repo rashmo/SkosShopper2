@@ -13,11 +13,13 @@ import javafx.fxml.Initializable;
 
 import org.apache.log4j.Logger;
 
+import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntDocumentManager;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 
 import controller.SkosEditorController;
 import exceptions.fuseki_exceptions.NoDatasetAccessorException;
@@ -77,20 +79,27 @@ public class ModelFacadeTEST implements Initializable
 
 	}
 	
+	public static void notifyAllControllerEnd() {
+		ontModel = SkosEditorController.endSKOSController();
+	}
 
 	public static void notifyAllControllerSart() {
 		// All controller will be notified so they can start to get this model and work with it
-		//SkosEditorController.startSKOSController(ontModel);
+		SkosEditorController.startSKOSController(ontModel);
 	}
 	
 	public static void loadModelFromServer(String graphURI) throws NoDatasetAccessorException{
-		ServerImporter.setGraphURI(graphURI);
-		ontModel = ModelFactory.createOntologyModel();
-		ontModel.add(ServerImporter.getModel());
+		ontModel = ModelFactory.createOntologyModel(ServerImporter.spec, ServerImporter.model);
 		ontModel.setNsPrefixes(ServerImporter.uriMap);
-		System.out.println(ontModel.getNsPrefixMap().toString());
-		System.out.println(ontModel.getNsPrefixURI(""));
 		notifyAllControllerSart();
+		
+		
+		ExtendedIterator<OntClass> oclasslist = ontModel.listClasses();
+		while (oclasslist.hasNext()) {
+
+				OntClass oclass = (OntClass) oclasslist.next();
+			
+		}
 	}
 	
 	public static OntModel getOntModel (){
