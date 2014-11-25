@@ -1,0 +1,668 @@
+@prefix : <http://rdf.getting-started.net/products/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://rdf.getting-started.net/products/> .
+
+<http://rdf.getting-started.net/products/> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://rdf.getting-started.net/products/canContain
+
+:canContain rdf:type owl:ObjectProperty ;
+            
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://rdf.getting-started.net/products/canUse
+
+:canUse rdf:type owl:FunctionalProperty ,
+                 owl:InverseFunctionalProperty ,
+                 owl:ObjectProperty ,
+                 owl:SymmetricProperty ;
+        
+        rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://rdf.getting-started.net/products/hasAttribute
+
+:hasAttribute rdf:type owl:ObjectProperty .
+
+
+
+###  http://rdf.getting-started.net/products/hasColor
+
+:hasColor rdf:type owl:ObjectProperty .
+
+
+
+###  http://rdf.getting-started.net/products/hasEAN
+
+:hasEAN rdf:type owl:AsymmetricProperty ,
+                 owl:IrreflexiveProperty ,
+                 owl:ObjectProperty .
+
+
+
+###  http://rdf.getting-started.net/products/hasLenseMount
+
+:hasLenseMount rdf:type owl:FunctionalProperty ,
+                        owl:ObjectProperty ;
+               
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://rdf.getting-started.net/products/isBrand
+
+:isBrand rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://rdf.getting-started.net/products/Attribute
+
+<http://rdf.getting-started.net/products/Attribute> rdf:type owl:Class .
+
+
+
+###  http://rdf.getting-started.net/products/Product
+
+<http://rdf.getting-started.net/products/Product> rdf:type owl:Class .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Camera
+
+<http://rdf.getting-started.net/products/Attribute/Camera> rdf:type owl:Class ;
+                                                     
+                                                     rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/General
+
+<http://rdf.getting-started.net/products/Attribute/General> rdf:type owl:Class ;
+                                                      
+                                                      rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Camera/Display
+
+<http://rdf.getting-started.net/products/Attribute/Camera/Display> rdf:type owl:Class ;
+                                                             
+                                                             rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute/Camera> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Camera/Resolution
+
+<http://rdf.getting-started.net/products/Attribute/Camera/Resolution> rdf:type owl:Class ;
+                                                                
+                                                                rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute/Camera> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/General/Brand
+
+<http://rdf.getting-started.net/products/Attribute/General/Brand> rdf:type owl:Class ;
+                                                            
+                                                            rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute/General> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/General/Color
+
+<http://rdf.getting-started.net/products/Attribute/General/Color> rdf:type owl:Class ;
+                                                            
+                                                            rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute/General> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/General/IdentificationNumber
+
+<http://rdf.getting-started.net/products/Attribute/General/IdentificationNumber> rdf:type owl:Class ;
+                                                                           
+                                                                           rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute/General> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/General/Price
+
+<http://rdf.getting-started.net/products/Attribute/General/Price> rdf:type owl:Class ;
+                                                            
+                                                            rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute/General> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/General/Weight
+
+<http://rdf.getting-started.net/products/Attribute/General/Weight> rdf:type owl:Class ;
+                                                             
+                                                             rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute/General> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/General/IdentificationNumber/EanNumber
+
+<http://rdf.getting-started.net/products/Attribute/General/IdentificationNumber/EanNumber> rdf:type owl:Class ;
+                                                                                     
+                                                                                     rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute/General/IdentificationNumber> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/General/IdentificationNumber/InternNumber
+
+<http://rdf.getting-started.net/products/Attribute/General/IdentificationNumber/InternNumber> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute/General/IdentificationNumber> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Bag
+
+<http://rdf.getting-started.net/products/Product/Bag> rdf:type owl:Class ;
+                                                
+                                                rdfs:subClassOf <http://rdf.getting-started.net/products/Product> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Camera
+
+<http://rdf.getting-started.net/products/Product/Camera> rdf:type owl:Class ;
+                                                   
+                                                   rdfs:subClassOf <http://rdf.getting-started.net/products/Product> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Objective
+
+<http://rdf.getting-started.net/products/Product/Objective> rdf:type owl:Class ;
+                                                      
+                                                      rdfs:subClassOf <http://rdf.getting-started.net/products/Product> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Tripod
+
+<http://rdf.getting-started.net/products/Product/Tripod> rdf:type owl:Class ;
+                                                   
+                                                   rdfs:subClassOf <http://rdf.getting-started.net/products/Product> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Camera/ActionCamera
+
+<http://rdf.getting-started.net/products/Product/Camera/ActionCamera> rdf:type owl:Class ;
+                                                                
+                                                                rdfs:subClassOf <http://rdf.getting-started.net/products/Product/Camera> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Camera/ReflexCamera
+
+<http://rdf.getting-started.net/products/Product/Camera/ReflexCamera> rdf:type owl:Class ;
+                                                                
+                                                                rdfs:subClassOf <http://rdf.getting-started.net/products/Product/Camera> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Tripod/Quickpod
+
+<http://rdf.getting-started.net/products/Product/Tripod/Quickpod> rdf:type owl:Class ;
+                                                            
+                                                            rdfs:subClassOf <http://rdf.getting-started.net/products/Product/Tripod> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Bag
+
+<http://rdf.getting-started.net/products/Attribute/Bag> rdf:type owl:Class ;
+                                                 
+                                                 rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Lense
+
+<http://rdf.getting-started.net/products/Attribute/Lense> rdf:type owl:Class ;
+                                                   
+                                                   rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Tripod
+
+<http://rdf.getting-started.net/products/Attribute/Tripod> rdf:type owl:Class ;
+                                                    
+                                                    rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Unit
+
+<http://rdf.getting-started.net/products/Attribute/Unit> rdf:type owl:Class ;
+                                                  
+                                                  rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Bag/Volume
+
+<http://rdf.getting-started.net/products/Attribute/Bag/Volume> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute/Bag> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Lense/Diaphragm
+
+<http://rdf.getting-started.net/products/Attribute/Lense/Diaphragm> rdf:type owl:Class ;
+                                                             
+                                                             rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute/Lense> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Lense/LenseMount
+
+<http://rdf.getting-started.net/products/Attribute/Lense/LenseMount> rdf:type owl:Class ;
+                                                              
+                                                              rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute/Lense> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Tripod/Legs
+
+<http://rdf.getting-started.net/products/Attribute/Tripod/Legs> rdf:type owl:Class ;
+                                                         
+                                                         rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute/Tripod> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Tripod/Level
+
+<http://rdf.getting-started.net/products/Attribute/Tripod/Level> rdf:type owl:Class ;
+                                                          
+                                                          rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute/Tripod> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Unit/Gramm
+
+<http://rdf.getting-started.net/products/Attribute/Unit/Gramm> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute/Unit> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Unit/Liter
+
+<http://rdf.getting-started.net/products/Attribute/Unit/Liter> rdf:type owl:Class ;
+                                                        
+                                                        rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute/Unit> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Unit/Millimeter
+
+<http://rdf.getting-started.net/products/Attribute/Unit/Millimeter> rdf:type owl:Class ;
+                                                             
+                                                             rdfs:subClassOf <http://rdf.getting-started.net/products/Attribute/Unit> .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://rdf.getting-started.net/products/Attribute/Bag/Volume/2
+
+<http://rdf.getting-started.net/products/Attribute/Bag/Volume/2> rdf:type owl:NamedIndividual ,
+                                                                   <http://rdf.getting-started.net/products/Attribute/Bag/Volume> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Bag/Volume/2.5
+
+<http://rdf.getting-started.net/products/Attribute/Bag/Volume/2.5> rdf:type owl:NamedIndividual ,
+                                                                     <http://rdf.getting-started.net/products/Attribute/Bag/Volume> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Bag/Volume/3
+
+<http://rdf.getting-started.net/products/Attribute/Bag/Volume/3> rdf:type owl:NamedIndividual ,
+                                                                   <http://rdf.getting-started.net/products/Attribute/Bag/Volume> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Brand/Canon
+
+<http://rdf.getting-started.net/products/Attribute/Brand/Canon> rdf:type owl:NamedIndividual ,
+                                                                  <http://rdf.getting-started.net/products/Attribute/General/Brand> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Brand/GoPro
+
+<http://rdf.getting-started.net/products/Attribute/Brand/GoPro> rdf:type owl:NamedIndividual ,
+                                                                  <http://rdf.getting-started.net/products/Attribute/General/Brand> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Brand/Nikon
+
+<http://rdf.getting-started.net/products/Attribute/Brand/Nikon> rdf:type owl:NamedIndividual ,
+                                                                  <http://rdf.getting-started.net/products/Attribute/General/Brand> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Camera/Display/No
+
+<http://rdf.getting-started.net/products/Attribute/Camera/Display/No> rdf:type owl:NamedIndividual ,
+                                                                        <http://rdf.getting-started.net/products/Attribute/Camera/Display> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Camera/Display/Yes
+
+<http://rdf.getting-started.net/products/Attribute/Camera/Display/Yes> rdf:type owl:NamedIndividual ,
+                                                                         <http://rdf.getting-started.net/products/Attribute/Camera/Display> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Camera/Resolution/16.0
+
+<http://rdf.getting-started.net/products/Attribute/Camera/Resolution/16.0> rdf:type owl:NamedIndividual ,
+                                                                             <http://rdf.getting-started.net/products/Attribute/Camera/Resolution> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Camera/Resolution/22.3
+
+<http://rdf.getting-started.net/products/Attribute/Camera/Resolution/22.3> rdf:type owl:NamedIndividual ,
+                                                                             <http://rdf.getting-started.net/products/Attribute/Camera/Resolution> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Color/Black
+
+<http://rdf.getting-started.net/products/Attribute/Color/Black> rdf:type owl:NamedIndividual ,
+                                                                  <http://rdf.getting-started.net/products/Attribute/General/Color> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Color/Grey
+
+<http://rdf.getting-started.net/products/Attribute/Color/Grey> rdf:type owl:NamedIndividual ,
+                                                                 <http://rdf.getting-started.net/products/Attribute/General/Color> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Color/Silver
+
+<http://rdf.getting-started.net/products/Attribute/Color/Silver> rdf:type owl:NamedIndividual ,
+                                                                   <http://rdf.getting-started.net/products/Attribute/General/Color> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Color/White
+
+<http://rdf.getting-started.net/products/Attribute/Color/White> rdf:type owl:NamedIndividual ,
+                                                                  <http://rdf.getting-started.net/products/Attribute/General/Color> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/IdentificationNumber/EanNumber/8714574583242
+
+<http://rdf.getting-started.net/products/Attribute/IdentificationNumber/EanNumber/8714574583242> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://rdf.getting-started.net/products/Attribute/General/IdentificationNumber/EanNumber> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/IdentificationNumber/InternNumber/04238
+
+<http://rdf.getting-started.net/products/Attribute/IdentificationNumber/InternNumber/04238> rdf:type owl:NamedIndividual ,
+                                                                                              <http://rdf.getting-started.net/products/Attribute/General/IdentificationNumber/InternNumber> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/IdentificationNumber/InternNumber/10378
+
+<http://rdf.getting-started.net/products/Attribute/IdentificationNumber/InternNumber/10378> rdf:type owl:NamedIndividual ,
+                                                                                              <http://rdf.getting-started.net/products/Attribute/General/IdentificationNumber/InternNumber> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/IdentificationNumber/InternNumber/16819
+
+<http://rdf.getting-started.net/products/Attribute/IdentificationNumber/InternNumber/16819> rdf:type owl:NamedIndividual ,
+                                                                                              <http://rdf.getting-started.net/products/Attribute/General/IdentificationNumber/InternNumber> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/IdentificationNumber/InternNumber/23564
+
+<http://rdf.getting-started.net/products/Attribute/IdentificationNumber/InternNumber/23564> rdf:type owl:NamedIndividual ,
+                                                                                              <http://rdf.getting-started.net/products/Attribute/General/IdentificationNumber/InternNumber> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/IdentificationNumber/InternNumber/97568
+
+<http://rdf.getting-started.net/products/Attribute/IdentificationNumber/InternNumber/97568> rdf:type owl:NamedIndividual ,
+                                                                                              <http://rdf.getting-started.net/products/Attribute/General/IdentificationNumber/InternNumber> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Lense/Diaphragm/120
+
+<http://rdf.getting-started.net/products/Attribute/Lense/Diaphragm/120> rdf:type owl:NamedIndividual ,
+                                                                          <http://rdf.getting-started.net/products/Attribute/Lense/Diaphragm> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Lense/Diaphragm/50
+
+<http://rdf.getting-started.net/products/Attribute/Lense/Diaphragm/50> rdf:type owl:NamedIndividual ,
+                                                                         <http://rdf.getting-started.net/products/Attribute/Lense/Diaphragm> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Lense/Diaphragm/70
+
+<http://rdf.getting-started.net/products/Attribute/Lense/Diaphragm/70> rdf:type owl:NamedIndividual ,
+                                                                         <http://rdf.getting-started.net/products/Attribute/Lense/Diaphragm> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Lense/LenseMount/Canon-EF-Mount
+
+<http://rdf.getting-started.net/products/Attribute/Lense/LenseMount/Canon-EF-Mount> rdf:type owl:NamedIndividual ,
+                                                                                      <http://rdf.getting-started.net/products/Attribute/Lense/LenseMount> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Price/2500-00
+
+<http://rdf.getting-started.net/products/Attribute/Price/2500-00> rdf:type owl:NamedIndividual ,
+                                                                    <http://rdf.getting-started.net/products/Attribute/General/Price> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Price/39-90
+
+<http://rdf.getting-started.net/products/Attribute/Price/39-90> rdf:type owl:NamedIndividual ,
+                                                                  <http://rdf.getting-started.net/products/Attribute/General/Price> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Tripod/Legs/1
+
+<http://rdf.getting-started.net/products/Attribute/Tripod/Legs/1> rdf:type owl:NamedIndividual ,
+                                                                    <http://rdf.getting-started.net/products/Attribute/Tripod/Legs> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Tripod/Legs/2
+
+<http://rdf.getting-started.net/products/Attribute/Tripod/Legs/2> rdf:type owl:NamedIndividual ,
+                                                                    <http://rdf.getting-started.net/products/Attribute/Tripod/Legs> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Tripod/Legs/3
+
+<http://rdf.getting-started.net/products/Attribute/Tripod/Legs/3> rdf:type owl:NamedIndividual ,
+                                                                    <http://rdf.getting-started.net/products/Attribute/Tripod/Legs> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Tripod/Legs/4
+
+<http://rdf.getting-started.net/products/Attribute/Tripod/Legs/4> rdf:type owl:NamedIndividual ,
+                                                                    <http://rdf.getting-started.net/products/Attribute/Tripod/Legs> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Tripod/Level/No
+
+<http://rdf.getting-started.net/products/Attribute/Tripod/Level/No> rdf:type owl:NamedIndividual ,
+                                                                      <http://rdf.getting-started.net/products/Attribute/Tripod/Level> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Tripod/Level/Yes
+
+<http://rdf.getting-started.net/products/Attribute/Tripod/Level/Yes> rdf:type owl:NamedIndividual ,
+                                                                       <http://rdf.getting-started.net/products/Attribute/Tripod/Level> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Weight/1369
+
+<http://rdf.getting-started.net/products/Attribute/Weight/1369> rdf:type owl:NamedIndividual ,
+                                                                  <http://rdf.getting-started.net/products/Attribute/General/Weight> .
+
+
+
+###  http://rdf.getting-started.net/products/Attribute/Weight/650
+
+<http://rdf.getting-started.net/products/Attribute/Weight/650> rdf:type owl:NamedIndividual ,
+                                                                 <http://rdf.getting-started.net/products/Attribute/General/Weight> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Bag/Bag001
+
+<http://rdf.getting-started.net/products/Product/Bag/Bag001> rdf:type owl:NamedIndividual ,
+                                                               <http://rdf.getting-started.net/products/Product/Bag> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Bag/Bag002
+
+<http://rdf.getting-started.net/products/Product/Bag/Bag002> rdf:type owl:NamedIndividual ,
+                                                               <http://rdf.getting-started.net/products/Product/Bag> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Camera/ActionCamera/Camera001
+
+<http://rdf.getting-started.net/products/Product/Camera/ActionCamera/Camera001> rdf:type owl:NamedIndividual ,
+                                                                                  <http://rdf.getting-started.net/products/Product/Camera/ActionCamera> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Camera/ReflexCamera/Camera002
+
+<http://rdf.getting-started.net/products/Product/Camera/ReflexCamera/Camera002> rdf:type owl:NamedIndividual ,
+                                                                                  <http://rdf.getting-started.net/products/Product/Camera/ReflexCamera> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Camera/ReflexCamera/Camera003
+
+<http://rdf.getting-started.net/products/Product/Camera/ReflexCamera/Camera003> rdf:type owl:NamedIndividual ,
+                                                                                  <http://rdf.getting-started.net/products/Product/Camera/ReflexCamera> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Camera/ReflexCamera/Canon-EOS-5D-MarkIII
+
+<http://rdf.getting-started.net/products/Product/Camera/ReflexCamera/Canon-EOS-5D-MarkIII> rdf:type owl:NamedIndividual ,
+                                                                                             <http://rdf.getting-started.net/products/Product/Camera/ReflexCamera> ;
+                                                                                    
+                                                                                    :isBrand <http://rdf.getting-started.net/products/Attribute/Brand/Canon> ;
+                                                                                    
+                                                                                    :hasEAN <http://rdf.getting-started.net/products/Attribute/IdentificationNumber/EanNumber/8714574583242> ;
+                                                                                    
+                                                                                    :hasLenseMount <http://rdf.getting-started.net/products/Attribute/Lense/LenseMount/Canon-EF-Mount> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Objective/Canon-EF-50mm-001
+
+<http://rdf.getting-started.net/products/Product/Objective/Canon-EF-50mm-001> rdf:type owl:NamedIndividual ,
+                                                                                <http://rdf.getting-started.net/products/Product/Objective> ;
+                                                                       
+                                                                       :hasLenseMount <http://rdf.getting-started.net/products/Attribute/Lense/LenseMount/Canon-EF-Mount> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Objective/Objective002
+
+<http://rdf.getting-started.net/products/Product/Objective/Objective002> rdf:type owl:NamedIndividual ,
+                                                                           <http://rdf.getting-started.net/products/Product/Objective> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Tripod/Tripod001
+
+<http://rdf.getting-started.net/products/Product/Tripod/Tripod001> rdf:type owl:NamedIndividual ,
+                                                                     <http://rdf.getting-started.net/products/Product/Tripod> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Tripod/Tripod002
+
+<http://rdf.getting-started.net/products/Product/Tripod/Tripod002> rdf:type owl:NamedIndividual ,
+                                                                     <http://rdf.getting-started.net/products/Product/Tripod> .
+
+
+
+###  http://rdf.getting-started.net/products/Product/Tripod/Quickpod/Quickpod001
+
+<http://rdf.getting-started.net/products/Product/Tripod/Quickpod/Quickpod001> rdf:type owl:NamedIndividual ,
+                                                                                <http://rdf.getting-started.net/products/Product/Tripod/Quickpod> .
+
+
+
+
+###  Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net
+

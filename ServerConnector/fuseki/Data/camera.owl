@@ -1,0 +1,596 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#"
+     xml:base="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatAllgemeineDaten -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatAllgemeineDaten">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Allgemeine_Daten"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Sony28-75_mm_2,8_SAM_SAL-2875"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatAusstattung -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatAusstattung">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Austattung"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Sony28-75_mm_2,8_SAM_SAL-2875"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatBajonettAnschluss -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatBajonettAnschluss">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Adapter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Sony28-75_mm_2,8_SAM_SAL-2875"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatHersteller -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatHersteller">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Adapter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Hersteller"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Sony28-75_mm_2,8_SAM_SAL-2875"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatTechnischeDaten -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatTechnischeDaten">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Sony28-75_mm_2,8_SAM_SAL-2875"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#adapterBezeichnung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#adapterBezeichnung">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Adapter"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#anzahlBlendlamellen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#anzahlBlendlamellen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#anzahlGruppen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#anzahlGruppen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#anzahlLinsen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#anzahlLinsen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatAsphaerischeLinsen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatAsphaerischeLinsen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Austattung"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatAutofokus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatAutofokus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Austattung"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatAußendurchmesser -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatAußendurchmesser">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Allgemeine_Daten"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatBezeichnung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatBezeichnung">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Hersteller"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatBildstabilisator -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatBildstabilisator">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Austattung"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatBrennweiteMax -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatBrennweiteMax">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatBrennweiteMin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatBrennweiteMin">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatEDLinsen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatEDLinsen">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Austattung"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatGewicht -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatGewicht">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Allgemeine_Daten"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatHomepage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatHomepage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Hersteller"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatInnenfokussierung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatInnenfokussierung">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Austattung"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatLichstärke -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatLichstärke">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatLänge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatLänge">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Allgemeine_Daten"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatMaxAbbildungsmassstab -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatMaxAbbildungsmassstab">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatModellbezeichnung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatModellbezeichnung">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Allgemeine_Daten"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatNaheinstellgrenze -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatNaheinstellgrenze">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatUltraschallmotor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#hatUltraschallmotor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Austattung"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Adapter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Adapter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Allgemeine_Daten -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Allgemeine_Daten"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Austattung -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Austattung"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Fotokamera-Objektive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Fotokamera-Objektive"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Hersteller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Hersteller"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Sony28-75_mm_2,8_SAM_SAL-2875 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Sony28-75_mm_2,8_SAM_SAL-2875">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Weitwinkelobjektiv"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Zoomobjektiv"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Weitwinkelobjektiv -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Weitwinkelobjektiv">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Fotokamera-Objektive"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Zoomobjektiv"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Zoomobjektiv -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Zoomobjektiv">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Fotokamera-Objektive"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Anzahl_Blendlamellen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Anzahl_Blendlamellen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        <anzahlBlendlamellen rdf:datatype="&xsd;int">7</anzahlBlendlamellen>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Anzahl_Gruppen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Anzahl_Gruppen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        <anzahlGruppen rdf:datatype="&xsd;int">14</anzahlGruppen>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Anzahl_Linsen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Anzahl_Linsen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        <anzahlLinsen rdf:datatype="&xsd;int">16</anzahlLinsen>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Asphaerische_Linse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Asphaerische_Linse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Austattung"/>
+        <hatAsphaerischeLinsen rdf:datatype="&xsd;boolean">false</hatAsphaerischeLinsen>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Autofokus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Autofokus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Austattung"/>
+        <hatAutofokus rdf:datatype="&xsd;boolean">true</hatAutofokus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Außendurchmesser -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Außendurchmesser">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Allgemeine_Daten"/>
+        <hatAußendurchmesser rdf:datatype="&xsd;int">77</hatAußendurchmesser>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Bajonett-Adapter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Bajonett-Adapter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Adapter"/>
+        <adapterBezeichnung rdf:datatype="&xsd;string">Sony AF</adapterBezeichnung>
+        <hatBajonettAnschluss rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Bajonett-Adapter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Bezeichnung -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Bezeichnung">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Hersteller"/>
+        <hatBezeichnung rdf:datatype="&xsd;string">Sony</hatBezeichnung>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Bildstabilisator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Bildstabilisator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Austattung"/>
+        <hatBildstabilisator rdf:datatype="&xsd;boolean">false</hatBildstabilisator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#ED_Linse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#ED_Linse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Austattung"/>
+        <hatEDLinsen rdf:datatype="&xsd;boolean">false</hatEDLinsen>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Filtergrösse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Filtergrösse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        <hatBrennweiteMax rdf:datatype="&xsd;int">67</hatBrennweiteMax>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Gewicht -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Gewicht">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Allgemeine_Daten"/>
+        <hatGewicht rdf:datatype="&xsd;int">565</hatGewicht>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Homepage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Homepage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Hersteller"/>
+        <hatHomepage rdf:datatype="&xsd;string">htttp://www.sony.de/electronics/objective/t/kameraobjektive</hatHomepage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Innenfokus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Innenfokus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Austattung"/>
+        <hatInnenfokussierung rdf:datatype="&xsd;boolean">false</hatInnenfokussierung>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Lichststärke -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Lichststärke">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        <hatLichstärke rdf:datatype="&xsd;float">2.8</hatLichstärke>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Länge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Länge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Allgemeine_Daten"/>
+        <hatLänge rdf:datatype="&xsd;int">94</hatLänge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Max_Abbildungsmassstab -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Max_Abbildungsmassstab">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        <hatMaxAbbildungsmassstab rdf:datatype="&xsd;string">1:4,55</hatMaxAbbildungsmassstab>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Max_Brennweite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Max_Brennweite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        <hatBrennweiteMax rdf:datatype="&xsd;int">75</hatBrennweiteMax>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Min_Brennweite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Min_Brennweite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        <hatBrennweiteMax rdf:datatype="&xsd;int">28</hatBrennweiteMax>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Modell-Bezeichnung -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Modell-Bezeichnung">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Allgemeine_Daten"/>
+        <hatModellbezeichnung rdf:datatype="&xsd;string">&quot;28-75 mm 2,8 SAM AL-2875&quot;</hatModellbezeichnung>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Naheinstellgrenze -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Naheinstellgrenze">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        <hatNaheinstellgrenze rdf:datatype="&xsd;int">380</hatNaheinstellgrenze>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Ultraschallmotor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Ultraschallmotor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Austattung"/>
+        <hatInnenfokussierung rdf:datatype="&xsd;boolean">true</hatInnenfokussierung>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Allgemeine_Daten"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Austattung"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Fotokamera-Objektive"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Hersteller"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Adapter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Allgemeine_Daten"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Austattung"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Fotokamera-Objektive"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Hersteller"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/rasheed/ontologies/2014/4/untitled-ontology-26#Technische_Daten"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

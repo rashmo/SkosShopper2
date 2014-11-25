@@ -1,0 +1,354 @@
+@prefix : <http://www.w3.org/2008/05/skos-xl#> .
+@prefix u: <http://www.example.org/uni#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix db: <> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ex: <http://example.org/> .
+@prefix fc: <http://xmlns.com/foaf/corp#> .
+@prefix my: <urn:makub:builtIn#> .
+@prefix ns: <http://creativecommons.org/ns#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix om: <http://www.wurvoc.org/vocabularies/om-1.8/> .
+@prefix p1: <http://www.owl-ontologies.com/assert.owl#> .
+@prefix qr: <http://purl.org/eis/vocab/qr#> .
+@prefix ub: <http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix wn: <http://www.ontologyportal.org/WordNet.owl#> .
+@prefix daq: <http://purl.org/eis/vocab/daq#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix eds: <http://www.umwd.dolnyslask.pl/eds#> .
+@prefix ero: <https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/EnergyResourceOntology.owl#> .
+@prefix foo: <http://example.org/ns#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix git: <file:/C:/Users/carmencheh/thesis/git.owl> .
+@prefix ipa: <http://spcdata.digitpa.gov.it/> .
+@prefix lcc: <http://smartcity.linkeddata.es/LCC/ontology/EnergyConsumption#> .
+@prefix map: <#> .
+@prefix mfg: <http://www.workingontologist.org/Examples/Chapter3/Product.owl#> .
+@prefix ns1: <http://protege.stanford.edu/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prs: <http://example.fr/personne.html> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .
+@prefix tst: <http://www.test.org/test.ttl#> .
+@prefix var: <urn:swrl#> .
+@prefix vin: <http://www.example.org/wine#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsp: <http://www.owl-ontologies.com/2005/08/07/xsp.owl#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix daml: <http://www.daml.org/2001/03/daml+oil#> .
+@prefix fish: <http://www.fishbase.org/entity#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix food: <http://www.example.org/food#> .
+@prefix iswc: <http://annotation.semanticweb.org/iswc/iswc.daml#> .
+@prefix jdbc: <http://d2rq.org/terms/jdbc/> .
+@prefix lawd: <http://lawd.info/ontology/> .
+@prefix owl2: <http://www.w3.org/2006/12/owl2#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix saws: <http://purl.org/saws/ontology#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix snap: <http://data.snapdrgn.net/ontology/snap#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix var2: <urn:http://www.w3.org/2003/11/swrl#> .
+@prefix void: <http://www.w3.org/TR/void/> .
+@prefix Glass: <http://www.semanticweb.org/CocktailOntology/Glass/#> .
+@prefix aiiso: <http://purl.org/vocab/aiiso/schema#> .
+@prefix cidoc: <http://erlangen-crm.org/current/> .
+@prefix emoti: <http://www.semanticweb.org/ontologies/2012/9/EmotiSKOS.skos#> .
+@prefix oboRO: <http://obofoundry.org/ro/ro.owl#> .
+@prefix pizza: <http://www.co-ode.org/ontologies/pizza/pizza.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix swrlx: <http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#> .
+@prefix vCard: <http://www.w3.org/2001/vcard-rdf/3.0#> .
+@prefix vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> .
+@prefix vocab: <vocab/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix marine: <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#> .
+@prefix schema: <http://schema.org/> .
+@prefix sdlres: <http://sdl.uniroma1.it/sapienzadigitalresources#> .
+@prefix sparql: <http://www.topbraidcomposer.org/owl/2006/09/sparql.owl#> .
+@prefix synset: <http://www.semanticweb.org/ontologies/2012/9/Synset.skos#> .
+@prefix tbcgeo: <http://www.topbraidcomposer.org/owl/2006/07/tbcgeo.owl#> .
+@prefix travel: <http://www.topbraidcomposer.org/owl/2006/07/geotravel.owl#> .
+@prefix Alcohol: <http://www.semanticweb.org/CocktailOntology/Alcohol/#> .
+@prefix acetext: <http://attempto.ifi.uzh.ch/acetext#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix efrbroo: <http://erlangen-crm.org/efrbroo/> .
+@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix profile: <http://www.daml.org/services/owl-s/1.2/Profile.owl#> .
+@prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
+@prefix tenaris: <http://www.tenaris.org/ontology#> .
+@prefix Cocktail: <http://www.semanticweb.org/CocktailOntology/Cocktail/#> .
+@prefix admingeo: <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+@prefix ontology: <http://www.geonames.org/ontology#> .
+@prefix property: <http://www.example.org/properties/> .
+@prefix tmintDCS: <http://tmint.bplaced.net/tmint/TMintDCSXML#> .
+@prefix tminttop: <http://tmint.bplaced.net/tmint/TopLevelCategoriesRelationsXML#> .
+@prefix tutorial: <http://acrab.ics.muni.cz/ontologies/tutorial.owl#> .
+@prefix Cocktail2: <http://www.semanticweb.org/CocktailOntology/Cocktail/> .
+@prefix tmintCore: <http://tmint.bplaced.net/tmint/TMintCoreXML#> .
+@prefix LegoBricks: <http://www.semanticweb.org/ontologies/2014/8/LegoBricks.owl#> .
+@prefix ace_lexicon: <http://attempto.ifi.uzh.ch/ace_lexicon#> .
+@prefix descrizioni: <http://www.cnr.it/ontology/cnr/descrizioni.owl#> .
+@prefix BPMN_Ontology: <http://dkm.fbk.eu/index.php/BPMN_Ontology#> .
+@prefix fhkb_chapter_2: <http://mowl-power.cs.man.ac.uk/fhkbtutorial/ontology/fhkb_chapter_2.owl#> .
+@prefix fhkb_chapter_4: <http://mowl-power.cs.man.ac.uk/fhkbtutorial/ontology/fhkb_chapter_4.owl#> .
+@prefix fhkb_chapter_5: <http://mowl-power.cs.man.ac.uk/fhkbtutorial/ontology/fhkb_chapter_5.owl#> .
+@prefix fhkb_chapter_7: <http://mowl-power.cs.man.ac.uk/fhkbtutorial/ontology/fhkb_chapter_7.owl#> .
+@prefix fhkb_chapter_9: <http://mowl-power.cs.man.ac.uk/fhkbtutorial/ontology/fhkb_chapter_9.owl#> .
+@prefix AlcoholByVolume: <http://www.semanticweb.org/CocktailOntology/Alcohol/AlcoholByVolume/#> .
+@prefix CocktailOntology: <http://www.semanticweb.org/CocktailOntology/#> .
+@prefix NonAlcoholicDrink: <http://www.semanticweb.org/CocktailOntology/NonAlcoholicDrink/#> .
+@prefix untitled-ontology-46: <http://www.semanticweb.org/sandra/ontologies/2014/9/untitled-ontology-46#> .
+@prefix Ontology1378394921444: <http://www.semanticweb.org/ontologies/2013/8/Ontology1378394921444.owl#> .
+@prefix Ontology1410720894152: <http://www.semanticweb.org/ontologies/2014/8/Ontology1410720894152.owl#> .
+@base <http://www.w3.org/2008/05/skos-xl> .
+
+<http://www.w3.org/2008/05/skos-xl> rdf:type owl:Ontology ;
+                                    
+                                    dct:creator "Sean Bechhofer" ;
+                                    
+                                    dct:contributor "Participants in W3C's Semantic Web Deployment Working Group." ;
+                                    
+                                    dct:creator "Alistair Miles" ;
+                                    
+                                    dct:description "An RDF vocabulary extending SKOS and allowing the description and linking of lexical entities."@en ;
+                                    
+                                    dct:title "SKOS XL Vocabulary"@en ;
+                                    
+                                    owl:imports <http://www.w3.org/2004/02/skos/core> ;
+                                    
+                                    rdfs:seeAlso <http://www.w3.org/2008/05/skos> .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.w3.org/2008/05/skos-xl#altLabel
+
+:altLabel rdf:type owl:ObjectProperty ;
+          
+          rdfs:label "alternative label"@en ;
+          
+          rdfs:comment "If C skosxl:altLabel L and L skosxl:literalForm V, then X skos:altLabel V."@en ;
+          
+          skos:definition "The property skosxl:altLabel is used to associate an skosxl:Label with a skos:Concept. The property is analogous to skos:altLabel."@en ;
+          
+          rdfs:seeAlso skos:altLabel ;
+          
+          rdfs:isDefinedBy <http://www.w3.org/2008/05/skos-xl> ;
+          
+          rdfs:range :Label .
+
+
+
+###  http://www.w3.org/2008/05/skos-xl#hiddenLabel
+
+:hiddenLabel rdf:type owl:ObjectProperty ;
+             
+             rdfs:label "hidden label"@en ;
+             
+             rdfs:comment "If C skosxl:hiddenLabel L and L skosxl:literalForm V, then C skos:hiddenLabel V."@en ;
+             
+             skos:definition "The property skosxl:hiddenLabel is used to associate an skosxl:Label with a skos:Concept. The property is analogous to skos:hiddenLabel."@en ;
+             
+             rdfs:seeAlso skos:hiddenLabel ;
+             
+             rdfs:isDefinedBy <http://www.w3.org/2008/05/skos-xl> ;
+             
+             rdfs:range :Label .
+
+
+
+###  http://www.w3.org/2008/05/skos-xl#labelRelation
+
+:labelRelation rdf:type owl:ObjectProperty ,
+                        owl:SymmetricProperty ;
+               
+               rdfs:label "label relation"@en ;
+               
+               skos:definition "The property skosxl:labelRelation is used for representing binary ('direct') relations between instances of the class skosxl:Label."@en ;
+               
+               skos:scopeNote "skosxl:labelRelation is not intended to be used directly, but rather as the basis for a design pattern which can be refined for more specific labeling scenarios."@en ;
+               
+               rdfs:isDefinedBy <http://www.w3.org/2008/05/skos-xl> ;
+               
+               rdfs:domain :Label ;
+               
+               rdfs:range :Label .
+
+
+
+###  http://www.w3.org/2008/05/skos-xl#prefLabel
+
+:prefLabel rdf:type owl:ObjectProperty ;
+           
+           rdfs:label "preferred label"@en ;
+           
+           rdfs:comment "If C skosxl:prefLabel L and L skosxl:literalForm V, then X skos:prefLabel V."@en ;
+           
+           skos:definition "The property skosxl:prefLabel is used to associate an skosxl:Label with a skos:Concept. The property is analogous to skos:prefLabel."@en ;
+           
+           rdfs:seeAlso skos:prefLabel ;
+           
+           rdfs:isDefinedBy <http://www.w3.org/2008/05/skos-xl> ;
+           
+           rdfs:range :Label .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://www.w3.org/2008/05/skos-xl#literalForm
+
+:literalForm rdf:type owl:DatatypeProperty ;
+             
+             rdfs:label "literal form"@en ;
+             
+             rdfs:comment "If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource."@en ;
+             
+             skos:definition "The property skosxl:literalForm is used to give the literal form of an skosxl:Label."@en ;
+             
+             rdfs:comment "The range of skosxl:literalForm is the class of RDF plain literals."@en ;
+             
+             rdfs:isDefinedBy <http://www.w3.org/2008/05/skos-xl> ;
+             
+             rdfs:domain :Label .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.w3.org/2004/02/skos/core#Collection
+
+skos:Collection owl:disjointWith :Label .
+
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+
+skos:Concept owl:disjointWith :Label .
+
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+
+skos:ConceptScheme owl:disjointWith :Label .
+
+
+
+###  http://www.w3.org/2008/05/skos-xl#Label
+
+:Label rdf:type owl:Class ;
+       
+       rdfs:label "Label"@en ;
+       
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :literalForm ;
+                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                       ] ;
+       
+       skos:definition "A special class of lexical entities."@en ;
+       
+       rdfs:isDefinedBy <http://www.w3.org/2008/05/skos-xl> .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://www.w3.org/2008/05/skos-xl#ArtikelId
+
+:ArtikelId rdf:type owl:NamedIndividual ,
+                    skos:Concept ;
+           
+           skos:related :Produkt .
+
+
+
+###  http://www.w3.org/2008/05/skos-xl#LabelForKamera
+
+:LabelForKamera rdf:type owl:NamedIndividual ,
+                         :Label ;
+                
+                :literalForm "Kamera"@de .
+
+
+
+###  http://www.w3.org/2008/05/skos-xl#Produkt
+
+:Produkt rdf:type owl:NamedIndividual ,
+                  skos:Concept .
+
+
+
+###  http://www.w3.org/2008/05/skos-xl#Produkte
+
+:Produkte rdf:type owl:NamedIndividual ,
+                   skos:ConceptScheme ;
+          
+          skos:hasTopConcept :Produkt .
+
+
+
+###  http://www.w3.org/2008/05/skos-xl#Produkt/Kamera
+
+<http://www.w3.org/2008/05/skos-xl#Produkt/Kamera> rdf:type owl:NamedIndividual ,
+                                                            skos:Concept ;
+                                                   
+                                                   :prefLabel :LabelForKamera ;
+                                                   
+                                                   skos:broader :Produkt ;
+                                                   
+                                                   skos:narrower <http://www.w3.org/2008/05/skos-xl#Produkt/Objektiv> .
+
+
+
+###  http://www.w3.org/2008/05/skos-xl#Produkt/Objektiv
+
+<http://www.w3.org/2008/05/skos-xl#Produkt/Objektiv> rdf:type owl:NamedIndividual ,
+                                                              skos:Concept .
+
+
+
+###  http://www.w3.org/2008/05/skos-xl#Produkt/Kamera/Spiegelreflexkamera
+
+<http://www.w3.org/2008/05/skos-xl#Produkt/Kamera/Spiegelreflexkamera> rdf:type owl:NamedIndividual ,
+                                                                                skos:Concept ;
+                                                                       
+                                                                       skos:broader <http://www.w3.org/2008/05/skos-xl#Produkt/Kamera> .
+
+
+
+
+###  Generated by the OWL API (version 3.4.5-SNAPSHOT) http://owlapi.sourceforge.net
